@@ -39,11 +39,6 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
     
-    // Fill the landing page image to full screen
-    $(window).on("load resize", function() {
-        $("header.masthead").css("height", window.innerHeight);
-    });
-    
     // Hide navbar when modals trigger
     $('.portfolio-modal').on('show.bs.modal', function(e) {
       $(".navbar").addClass("d-none");

@@ -190,7 +190,6 @@ img::-moz-selection {
     width: 50px;
     height: 50px;
   }
-
   .landing-page-logo {
     width: 200px;
     height: 200px;
@@ -202,17 +201,18 @@ img::-moz-selection {
 }
 
 header.masthead {
-  position: relative;
   text-align: center;
   color: white;
   background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro-lead-in {
