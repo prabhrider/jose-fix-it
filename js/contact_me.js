@@ -5,7 +5,7 @@ $(function () {
     submitError: function ($form, event, errors) {
       // additional error messages or events
     },
-    submitSuccess: function ($form, event) {
+    submitSuccess: function ($form, event) {      
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
       var name = $("input#name").val();
@@ -19,23 +19,26 @@ $(function () {
       }
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+       var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Sending...';
+       if ($this.html() !== loadingText) {
+         $this.data('original-text', $this.html());
+         $this.html(loadingText);
+       }    
 
-      function SuccessMessage(statusCode) {
+      function SuccessMessage() {
         //Success message
-        console.log("status code " + statusCode);
         $('#success').html("<div class='alert alert-success'>");
         $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
           .append("</button>");
         $('#success > .alert-success')
-          .append("<strong>Your message has been sent. </strong>");
+          .append("<strong>" + firstName + ", your message has been sent. Someone will reply you soon. </strong>");
         $('#success > .alert-success')
           .append('</div>');
         //clear all fields
         $('#contactForm').trigger("reset");
       }
 
-      function FailureMessage(statusCode) {
-        console.log("status code " + statusCode);
+      function FailureMessage() {
         // Fail message
         $('#success').html("<div class='alert alert-danger'>");
         $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -45,32 +48,38 @@ $(function () {
         //clear all fields
         $('#contactForm').trigger("reset");
       }
-      $.ajax({
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSda9tl9Boh5BJS9cmgcJ9FjTI-0bCAbObmfmYfm_1C4A5m55A/formResponse",
-        data: {
-          "entry.215119693": name,
-          "entry.1074210692": phone,
-          "entry.1169079001": email,
-          "entry.1228534959": message
-        },
-        type: "POST",
-        dataType: "xml",
-        complete: function (jqXHR, textStatus) {
-          setTimeout(function () {
-            $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
-          }, 1000);
-          switch (jqXHR.status) {
+
+      var data = {
+           name: name,
+           phone: phone,
+           email: email,
+           message: message
+         };
+      var url = "https://script.google.com/macros/s/AKfycbwMv4XBCQ1aAhhGaqwdzq11Q_uS7ZEfjXvGoR8V5w/exec";
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {        
+        if(xhr.readyState === 4) {
+          $this.prop("disabled", false);
+          $this.html($this.data('original-text'));
+          console.log(xhr.status, xhr.statusText);
+          console.log(xhr.responseText);
+          switch(xhr.status) {
             case 200:
-            case 0:
-              SuccessMessage(jqXHR.status);
+              SuccessMessage();
               break;
-
             default:
-              FailureMessage(jqXHR.status);
+              FailureMessage();
           }
-        }
-
-      });
+        }        
+        return;
+      };
+      // url encode form data for sending as post data
+      var encoded = Object.keys(data).map(function(k) {
+          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+      }).join('&');
+      xhr.send(encoded);
     },
     filter: function () {
       return $(this).is(":visible");
