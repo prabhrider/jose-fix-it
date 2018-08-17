@@ -2,17 +2,31 @@
     "use strict"; // Start of use strict
 
     $('textarea#message').characterCounter({
-      counterSelector: '.character-counter',
+      counterSelector: '#character-counter',
       increaseCounting: true,
       renderTotal: true      
     });
 
-    // $('textarea#message').focus(function() {
-    //   $(this).next("span").show();
-    // });
-    // $('textarea#message').focusout(function() {
-    //   $(this).next("span").hide();
-    // });
+    $('textarea#message').focus(function() {
+      $("#character-counter").removeAttr('hidden');
+    });
+    $('textarea#message').focusout(function() {
+      $("#character-counter").attr('hidden','');
+    });
+
+
+    // Hide/show animation hamburger function
+  $('.navbar-toggler, .nav-link').on('click', function () {
+
+    // Take this line to first hamburger animations
+    $('.animated-icon1').toggleClass('open');
+
+    // Take this line to second hamburger animation
+    $('.animated-icon3').toggleClass('open');
+
+    // Take this line to third hamburger animation
+    $('.animated-icon4').toggleClass('open');
+  });
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
