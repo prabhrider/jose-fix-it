@@ -39,7 +39,7 @@ section {
 }
 
 .contact-section {
-  padding-top: 25px !important;
+  padding-top: 50px !important;
 }
 
 section h2.section-heading {
@@ -94,13 +94,37 @@ section h3.section-subheading {
   box-shadow: 0 0 0 0.2rem rgba(38, 159, 163, 0.5) !important;
 }
 
-::-moz-selection {
-  background: #FFC107;
+/*** Works on common browsers ***/
+::selection {
+  background-color: #455A64;
+  color: #fff;
   text-shadow: none;
 }
 
-::selection {
-  background: #FFC107;
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: #455A64;
+  color: #fff;
+  text-shadow: none;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: #455A64;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-ms-selection {
+  background-color: #455A64;
+  color: #fff;
+  text-shadow: none;
+}
+
+/*** For Webkit #352e7e; ***/
+::-webkit-selection {
+  background-color: #455A64;
+  color: #fff;
   text-shadow: none;
 }
 
