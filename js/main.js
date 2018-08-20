@@ -1,5 +1,30 @@
 (function($) {
     "use strict"; // Start of use strict
+    $("#portfolio-itmes").removeAttr('hidden');
+    var slickIds = ['#kitchen-slick', '#bath-slick', '#deck-slick'];
+    for(let i=0; i<slickIds.length; ++i) {
+      $(slickIds[i]).slick({
+        arrows: true,
+        dots: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        variableWidth: true
+      });
+      $(slickIds[i]).slickLightbox({
+        caption: 'caption',
+        slick: {
+          navigateByKeyboard: true,
+          dots: true,
+          infinite: true,
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          mobileFirst: true
+        }
+      });
+    }
 
     $('textarea#message').characterCounter({
       counterSelector: '#character-counter',
@@ -15,7 +40,7 @@
     });
 
 
-    // Hide/show animation hamburger function
+    // Toggle animation hamburger menu
   $('.navbar-toggler, .nav-link').on('click', function () {
 
     // Take this line to first hamburger animations
@@ -65,25 +90,6 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-    
-    // Hide navbar when modals trigger
-    $('.portfolio-modal').on('show.bs.modal', function(e) {
-      $(".navbar").addClass("d-none");
-    })
-    $('.portfolio-modal').on('hidden.bs.modal', function(e) {
-      $(".navbar").removeClass("d-none");
-    })
-
-    // Floating label headings for the contact form
-  $(function() {
-    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-      $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-    }).on("focus", ".floating-label-form-group", function() {
-      $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function() {
-      $(this).removeClass("floating-label-form-group-with-focus");
-    });
-  });
   
   })(jQuery); // End of use strict
   

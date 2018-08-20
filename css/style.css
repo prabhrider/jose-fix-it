@@ -317,7 +317,7 @@ header.masthead .intro-text .intro-heading {
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
+  background: rgba(192, 192, 192, 0.3);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -362,6 +362,25 @@ header.masthead .intro-text .intro-heading {
   font-style: italic;
   margin: 0;
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px !important; 
+}
+
+.slick-next {
+  right: 10px !important;
+  z-index: 25 !important;
+}
+
+.slick-prev {
+  left: 10px !important;
+  z-index: 25 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white;
 }
 
 #portfolio * {

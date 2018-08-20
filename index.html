@@ -32,6 +32,11 @@
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+  <!-- slick with lightbox Carousel used for portofolio display -->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="vendor/slick-lightbox/slick-lightbox.css">
+
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/custom-fonts.css" rel="stylesheet">
@@ -77,21 +82,21 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead">
-      <div class="container d-flex h-100 align-items-center">
-          <div class="mx-auto text-center">
-              <div class="intro-text">
-                  <img class="landing-page-logo" src="img/jose-fix-it-logo.png" alt="Jose Fix It">
-                  <div class="intro-lead-in">Hi, I am Jose Mujica!</div>
-                  <div class="intro-heading">Your local handyman in Chicago northwest suburbs.</div>
-                  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-                </div>
-          </div>
-        </div>    
-  </header>
+<header class="masthead rgba-grey-strong">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <div class="intro-text">
+        <img class="landing-page-logo" src="img/jose-fix-it-logo.png" alt="Jose Fix It">
+        <div class="intro-lead-in">Hi, I am Jose Mujica!</div>
+        <div class="intro-heading">Your local handyman in Chicago northwest suburbs.</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+      </div>
+    </div>
+  </div>
+</header>
 
   <!-- Services -->
-  <section id="services">
+  <section id="services" class="rgba-mdb-color-slight">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -300,25 +305,137 @@
            <br>
         </div>
       </div>
-
+    </div>
+  </section>
       <!-- Portfolio Grid -->
-      <section id="portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Portfolio</h2>
-              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+      <section id="portfolio" class="bg-light">
+          <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Portfolio</h2>
+                  <h3 class="section-subheading text-muted">Check out some of the work I have done in the past.</h3>
+                </div>
+              </div>
+              <div class="row" hidden id="portfolio-itmes">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div id="kitchen-slick">
+                        <a class="portfolio-link" href="img/portfolio/kitchen-01-full.jpg" data-caption="Kitchen was rebuilt from ground up">
+                        <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                            <i class="fa fa-expand fa-3x"></i>
+                          </div>
+                        </div>
+                        <div class="item"><img src="img/portfolio/kitchen-01-thumbnail.jpg" alt=""></div>
+                      </a>
+                      <a class="portfolio-link" href="img/portfolio/kitchen-02-full.jpg" data-caption="Added new pantry with counter-top">
+                          <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                              <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                          </div>
+                          <div class="item"><img src="img/portfolio/kitchen-02-thumbnail.jpg" alt=""></div>
+                        </a>
+                        <a class="portfolio-link" href="img/portfolio/kitchen-03-full.jpg" data-caption="Kitchen was rebuilt">
+                            <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                              </div>
+                            </div>
+                            <div class="item"><img src="img/portfolio/kitchen-03-thumbnail.jpg" alt="" ></div>
+                          </a>
+                        </div>
+                  <div class="portfolio-caption">
+                    <h4>Kitchen</h4>
+                    <p class="text-muted">Kitchen projects</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                      <div id="bath-slick">
+                        <a class="portfolio-link" href="img/portfolio/bath-01-full.jpg">
+                        <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                            <i class="fa fa-expand fa-3x"></i>
+                          </div>
+                        </div>
+                        <div class="item"><img src="img/portfolio/bath-01-thumbnail.jpg" alt=""></div>
+                      </a>
+                      <a class="portfolio-link" href="img/portfolio/bath-02-full.jpg">
+                          <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                              <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                          </div>
+                          <div class="item"><img src="img/portfolio/bath-02-thumbnail.jpg" alt=""></div>
+                        </a>
+                        <a class="portfolio-link" href="img/portfolio/bath-03-full.jpg">
+                            <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                              </div>
+                            </div>
+                            <div class="item"><img src="img/portfolio/bath-03-thumbnail.jpg" alt="" ></div>
+                          </a>
+                          <a class="portfolio-link" href="img/portfolio/bath-04-full.jpg">
+                            <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                              </div>
+                            </div>
+                            <div class="item"><img src="img/portfolio/bath-04-thumbnail.jpg" alt="" ></div>
+                          </a>
+                        </div>
+                      <div class="portfolio-caption">
+                        <h4>Bath</h4>
+                        <p class="text-muted">Bath room projects</p>
+                      </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div id="deck-slick">
+                        <a class="portfolio-link" href="img/portfolio/deck-01-full.jpg">
+                        <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                            <i class="fa fa-expand fa-3x"></i>
+                          </div>
+                        </div>
+                        <div class="item"><img src="img/portfolio/deck-01-thumbnail.jpg" alt=""></div>
+                      </a>
+                      <a class="portfolio-link" href="img/portfolio/deck-02-full.jpg">
+                          <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                              <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                          </div>
+                          <div class="item"><img src="img/portfolio/deck-02-thumbnail.jpg" alt=""></div>
+                        </a>
+                        <a class="portfolio-link" href="img/portfolio/deck-03-full.jpg">
+                            <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                              </div>
+                            </div>
+                            <div class="item"><img src="img/portfolio/deck-03-thumbnail.jpg" alt="" ></div>
+                          </a>
+                          <a class="portfolio-link" href="img/portfolio/deck-04-full.jpg">
+                            <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                              </div>
+                            </div>
+                            <div class="item"><img src="img/portfolio/deck-04-thumbnail.jpg" alt="" ></div>
+                          </a>
+                        </div>
+                  <div class="portfolio-caption">
+                    <h4>Deck</h4>
+                    <p class="text-muted">Deck work</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
       </section>
 
       <!-- About-->
-      <section id="about">
+      <section id="about" class="rgba-mdb-color-slight">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -333,113 +450,116 @@
         </div>
       </section>      
 
-      <!-- Contact -->
-      <section class="contact-section" id="contact">
+<!-- Contact -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <!--Section heading-->
+    <h2 class="text-uppercase text-center mb-0">Contact Me</h2>
+    <hr class="star-dark ">
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto no-sm-mb">Do you have any questions? Please do not hesitate to contact me directly or drop me a message below.</p>
 
-        <!--Section heading-->
-        <h2 class="text-uppercase text-center mb-0">Contact Me</h2>
-        <hr class="star-dark ">
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto no-sm-mb">Do you have any questions? Please do not hesitate to contact me directly or drop me a message below.</p>
+    <div class="row">
 
-        <div class="row">
-
-          <!--Grid column-->
-          <div class="col-md-9 mb-md-0 mb-5">
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <!--Grid row-->
-              <div class="row">
-                <!--Grid column-->
-                <div class="col-md-6 control-group">
-                  <div class="md-form mb-0 form-group controls">
-                    <input type="text" id="name" name="name" class="form-control" maxlength="64" required="required" data-validation-required-message="Please enter your name.">
-                    <label for="name" >Your name</label>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-6 control-group">
-                  <div class="md-form mb-0 form-group controls">
-                    <input class="form-control" id="phone" type="tel" name="phone" 
-                    required="required" data-validation-required-message="Please enter your phone number."
-                    data-validation-phone-regex="\+?1?\s*\(?-*\.*(\d{3})\)?\.*-*\s*(\d{3})\.*-*\s*(\d{4})$"
-                    data-validation-phone-message="Invalid phone, use format i.e. 8476367785">
-                    <label for="phone">Phone Number</label>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <!--Grid column-->
-
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-6 control-group">
+              <div class="md-form mb-0 form-group controls">
+                <input type="text" id="name" name="name" class="form-control" maxlength="64" required="required" data-validation-required-message="Please enter your name.">
+                <label for="name">Your name</label>
+                <p class="help-block text-danger"></p>
               </div>
-              <!--Grid row-->
+            </div>
+            <!--Grid column-->
 
-              <!--Grid row-->
-              <div class="row">
-                <div class="col-md-12 control-group">
-                  <div class="md-form mb-0 form-group controls">
-                    <input class="form-control" id="email" type="email" name="email" required="required" data-validation-required-message="Please enter your email address.">                    
-                    <label for="email">Email Address</label>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
+            <!--Grid column-->
+            <div class="col-md-6 control-group">
+              <div class="md-form mb-0 form-group controls">
+                <input class="form-control" id="phone" type="tel" name="phone" required="required" data-validation-required-message="Please enter your phone number."
+                  data-validation-phone-regex="\+?1?\s*\(?-*\.*(\d{3})\)?\.*-*\s*(\d{3})\.*-*\s*(\d{4})$" data-validation-phone-message="Invalid phone, use format i.e. 8476367785">
+                <label for="phone">Phone Number</label>
+                <p class="help-block text-danger"></p>
               </div>
-              <!--Grid row-->
+            </div>
+            <!--Grid column-->
 
-              <!--Grid row-->
-              <div class="row">
-
-                <!--Grid column-->
-                <div class="col-md-12 control-group">
-
-                  <div class="md-form form-group controls">
-                    <textarea id="message" rows="2" class="form-control md-textarea" maxlength="500" required="required" data-validation-required-message="Please enter a message."></textarea>
-                    <label for="message">Your message</label>
-                    <span hidden id="character-counter" style="float: right; font-size: 12px; height: 1px;"></span>
-                    <p class="help-block text-danger"></p>
-                  </div>
-
-                </div>
-              </div>
-              <!--Grid row-->
-              <div id="success"></div>
-              <div class="text-center text-md-left form-group">
-                <button type="submit" class="btn btn-primary" id="sendMessageButton"><i class="fa fa-send mr-2"></i>Send</button>
-              </div>
-            </form>
           </div>
-          <!--Grid column-->
+          <!--Grid row-->
 
-          <!--Grid column-->
-          <div class="col-md-3 text-center">
-            <ul class="list-unstyled mb-0">
-              <li>
-                <i class="fa fa-map-marker fa-2x"></i>
-                <p class="text-muted">Prospect Heights, IL 60070 USA</p>
-              </li>
-
-              <li>
-                <a class="text-dark" href="tel:+1-847-636-7785"><i class="fa fa-phone mt-4 fa-2x" ></i></a>
-                <div>
-                    <a class="text-muted" href="tel:+1-847-636-7785">1-847-636-7785 </a>
-                </div>
-                
-              </li>
-
-              <li>
-                <i class="fa fa-envelope mt-4 fa-2x"></i>
-                <div>
-                    <a href="mailto:josefixitinfo@gmail.com" class="text-muted">josefixitinfo@gmail.com</a>
-                </div>          
-              </li>
-            </ul>
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12 control-group">
+              <div class="md-form mb-0 form-group controls">
+                <input class="form-control" id="email" type="email" name="email" required="required" data-validation-required-message="Please enter your email address.">
+                <label for="email">Email Address</label>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
           </div>
-          <!--Grid column-->
+          <!--Grid row-->
 
-        </div>
+          <!--Grid row-->
+          <div class="row">
 
-      </section>
+            <!--Grid column-->
+            <div class="col-md-12 control-group">
+
+              <div class="md-form form-group controls">
+                <textarea id="message" rows="2" class="form-control md-textarea" maxlength="500" required="required" data-validation-required-message="Please enter a message."></textarea>
+                <label for="message">Your message</label>
+                <span hidden id="character-counter" style="float: right; font-size: 12px; height: 1px;"></span>
+                <p class="help-block text-danger"></p>
+              </div>
+
+            </div>
+          </div>
+          <!--Grid row-->
+          <div id="success"></div>
+          <div class="text-center text-md-left form-group">
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">
+              <i class="fa fa-send mr-2"></i>Send</button>
+          </div>
+        </form>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <i class="fa fa-map-marker fa-2x"></i>
+            <p class="text-muted">Prospect Heights, IL 60070 USA</p>
+          </li>
+
+          <li>
+            <a class="text-dark" href="tel:+1-847-636-7785">
+              <i class="fa fa-phone mt-4 fa-2x"></i>
+            </a>
+            <div>
+              <a class="text-muted" href="tel:+1-847-636-7785">1-847-636-7785 </a>
+            </div>
+
+          </li>
+
+          <li>
+            <i class="fa fa-envelope mt-4 fa-2x"></i>
+            <div>
+              <a href="mailto:josefixitinfo@gmail.com" class="text-muted">josefixitinfo@gmail.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+    </div>
+  </div>
+
+
+</section>
 
   <!-- Footer -->
   <footer>
@@ -489,7 +609,9 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="vendor/mdbootstrap/js/mdb.min.js"></script>
-
+  <!-- slick-carousel -->
+  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <script type="text/javascript" src="vendor/slick-lightbox/slick-lightbox.min.js"></script>
   <!-- Contact form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
