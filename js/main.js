@@ -8,6 +8,16 @@
       $(".navbar").removeClass("d-none");
     }
   });
+  $('.carousel').on('dragStart.flickity', function (event, pointer) {
+    document.ontouchmove = function (e) {
+      e.preventDefault();
+    }
+  });
+  $('.carousel').on('dragEnd.flickity', function (event, pointer) {
+    document.ontouchmove = function (e) {
+      return true;
+    }
+  });
 
   $('textarea#message').characterCounter({
     counterSelector: '#character-counter',
