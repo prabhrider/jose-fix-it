@@ -25,17 +25,15 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="vendor/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+  <link href="vendor/flickity/flickity.min.css" rel="stylesheet">
+  <link href="vendor/flickity/fulscreen.css" rel="stylesheet">
+
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-  <!-- slick with lightbox Carousel used for portofolio display -->
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="vendor/slick-lightbox/slick-lightbox.css">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
@@ -307,131 +305,96 @@
       </div>
     </div>
   </section>
-      <!-- Portfolio Grid -->
-      <section id="portfolio" class="bg-light">
-          <div class="container">
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <h2 class="section-heading text-uppercase">Portfolio</h2>
-                  <h3 class="section-subheading text-muted">Check out some of the work I have done in the past.</h3>
+
+     <!-- Portfolio Grid -->
+      <section class="bg-light" id="portfolio">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Portfolio</h2>
+              <h3 class="section-subheading text-muted">Check out some of the work I have done in the past.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-12 portfolio-item">
+              <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "wrapAround": true}'>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-01-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-02-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-03-full.jpg" />
                 </div>
               </div>
-              <div class="row" hidden id="portfolio-itmes">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div id="kitchen-slick">
-                        <a class="portfolio-link" href="img/portfolio/kitchen-01-full.jpg" data-caption="Kitchen was rebuilt from ground up">
-                        <div class="portfolio-hover">
-                          <div class="portfolio-hover-content">
-                            <i class="fa fa-expand fa-3x"></i>
-                          </div>
-                        </div>
-                        <div class="item"><img src="img/portfolio/kitchen-01-thumbnail.jpg" alt=""></div>
-                      </a>
-                      <a class="portfolio-link" href="img/portfolio/kitchen-02-full.jpg" data-caption="Added new pantry with counter-top">
-                          <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                              <i class="fa fa-expand fa-3x"></i>
-                            </div>
-                          </div>
-                          <div class="item"><img src="img/portfolio/kitchen-02-thumbnail.jpg" alt=""></div>
-                        </a>
-                        <a class="portfolio-link" href="img/portfolio/kitchen-03-full.jpg" data-caption="Kitchen was rebuilt">
-                            <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                <i class="fa fa-expand fa-3x"></i>
-                              </div>
-                            </div>
-                            <div class="item"><img src="img/portfolio/kitchen-03-thumbnail.jpg" alt="" ></div>
-                          </a>
-                        </div>
-                  <div class="portfolio-caption">
-                    <h4>Kitchen</h4>
-                    <p class="text-muted">Kitchen projects</p>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                      <div id="bath-slick">
-                        <a class="portfolio-link" href="img/portfolio/bath-01-full.jpg">
-                        <div class="portfolio-hover">
-                          <div class="portfolio-hover-content">
-                            <i class="fa fa-expand fa-3x"></i>
-                          </div>
-                        </div>
-                        <div class="item"><img src="img/portfolio/bath-01-thumbnail.jpg" alt=""></div>
-                      </a>
-                      <a class="portfolio-link" href="img/portfolio/bath-02-full.jpg">
-                          <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                              <i class="fa fa-expand fa-3x"></i>
-                            </div>
-                          </div>
-                          <div class="item"><img src="img/portfolio/bath-02-thumbnail.jpg" alt=""></div>
-                        </a>
-                        <a class="portfolio-link" href="img/portfolio/bath-03-full.jpg">
-                            <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                <i class="fa fa-expand fa-3x"></i>
-                              </div>
-                            </div>
-                            <div class="item"><img src="img/portfolio/bath-03-thumbnail.jpg" alt="" ></div>
-                          </a>
-                          <a class="portfolio-link" href="img/portfolio/bath-04-full.jpg">
-                            <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                <i class="fa fa-expand fa-3x"></i>
-                              </div>
-                            </div>
-                            <div class="item"><img src="img/portfolio/bath-04-thumbnail.jpg" alt="" ></div>
-                          </a>
-                        </div>
-                      <div class="portfolio-caption">
-                        <h4>Bath</h4>
-                        <p class="text-muted">Bath room projects</p>
-                      </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div id="deck-slick">
-                        <a class="portfolio-link" href="img/portfolio/deck-01-full.jpg">
-                        <div class="portfolio-hover">
-                          <div class="portfolio-hover-content">
-                            <i class="fa fa-expand fa-3x"></i>
-                          </div>
-                        </div>
-                        <div class="item"><img src="img/portfolio/deck-01-thumbnail.jpg" alt=""></div>
-                      </a>
-                      <a class="portfolio-link" href="img/portfolio/deck-02-full.jpg">
-                          <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                              <i class="fa fa-expand fa-3x"></i>
-                            </div>
-                          </div>
-                          <div class="item"><img src="img/portfolio/deck-02-thumbnail.jpg" alt=""></div>
-                        </a>
-                        <a class="portfolio-link" href="img/portfolio/deck-03-full.jpg">
-                            <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                <i class="fa fa-expand fa-3x"></i>
-                              </div>
-                            </div>
-                            <div class="item"><img src="img/portfolio/deck-03-thumbnail.jpg" alt="" ></div>
-                          </a>
-                          <a class="portfolio-link" href="img/portfolio/deck-04-full.jpg">
-                            <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                <i class="fa fa-expand fa-3x"></i>
-                              </div>
-                            </div>
-                            <div class="item"><img src="img/portfolio/deck-04-thumbnail.jpg" alt="" ></div>
-                          </a>
-                        </div>
-                  <div class="portfolio-caption">
-                    <h4>Deck</h4>
-                    <p class="text-muted">Deck work</p>
-                  </div>
-                </div>
+              <div class="portfolio-caption">
+                <h4>Kitchen</h4>
+                <p class="text-muted">Kitchen projects</p>
               </div>
             </div>
+            <div class="col-lg-6 col-md-12 portfolio-item">
+              <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "wrapAround": true }'>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/bath-01-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/bath-02-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/bath-03-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/bath-04-full.jpg" />
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h4>Bath</h4>
+                <p class="text-muted">Bath room projects</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 portfolio-item">
+              <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "wrapAround": true }'>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/deck-01-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/deck-02-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/deck-03-full.jpg" />
+                </div>
+                <div class="carousel-cell">
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/deck-04-full.jpg" />
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h4>Deck</h4>
+                <p class="text-muted">Deck work</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 portfolio-item">
+                <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "wrapAround": true }'>
+                  <div class="carousel-cell">
+                    <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/other-01.jpg" />
+                  </div>
+                  <div class="carousel-cell">
+                    <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/other-02.jpg" />
+                  </div>
+                  <div class="carousel-cell">
+                    <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/other-03.jpg" />
+                  </div>
+                  <div class="carousel-cell">
+                    <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/other-04.jpg" />
+                  </div>
+                </div>
+                <div class="portfolio-caption">
+                  <h4>Other</h4>
+                  <p class="text-muted">Other projects</p>
+                </div>
+              </div>
+          </div>
+        </div>
       </section>
 
       <!-- About-->
@@ -609,15 +572,15 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="vendor/mdbootstrap/js/mdb.min.js"></script>
-  <!-- slick-carousel -->
-  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-  <script type="text/javascript" src="vendor/slick-lightbox/slick-lightbox.min.js"></script>
+  <!-- filckery-carousel -->
+  <script type="text/javascript" src="vendor/flickity/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="vendor/flickity/fullscreen.js"></script>
   <!-- Contact form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/main.js"></script>  
+  <script src="js/main.js"></script>
 </body>
 
 </html>
