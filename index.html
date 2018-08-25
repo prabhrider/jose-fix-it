@@ -46,10 +46,6 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <!-- <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars fa-2x"></i>
-      </button> -->
  <!-- Collapse button -->
  <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
  aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon3"><span></span><span></span><span></span><span></span></div></button>
@@ -84,6 +80,7 @@
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
       <div class="intro-text">
+        <h1 class="text-hide">Jose Fix It</h1>
         <img class="landing-page-logo" src="img/jose-fix-it-logo.png" alt="Jose Fix It">
         <div class="intro-lead-in">Hi, I am Jose Mujica!</div>
         <div class="intro-heading">Your local handyman in Chicago northwest suburbs.</div>
@@ -320,9 +317,12 @@
               <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "wrapAround": true}'>
                 <div class="carousel-cell">
                   <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-01-full.jpg" />
-                </div>
+                  <div class="carousel-caption d-md-block">
+                    <p>This kitchen was built from ground up.</p>
+                  </div>
+                  </div>
                 <div class="carousel-cell">
-                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-02-full.jpg" />
+                  <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-02-full.jpg" data-caption="Other side." />
                 </div>
                 <div class="carousel-cell">
                   <img class="carousel-cell-image" data-flickity-lazyload="img/portfolio/kitchen-03-full.jpg" />
@@ -403,13 +403,39 @@
           <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading text-uppercase">About</h2>
-              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+              <!-- Card -->
+              <div class="card card-cascade wider reverse">
+
+                <!-- Card image -->
+                <div class="view view-cascade overlay">
+                  <img class="card-img-top" src="img/about-background.jpg" alt="Card image cap">
+                  <a href="#!">
+                    <div class="mask rgba-light-blue-slight"></div>
+                  </a>
+                </div>
+                <!-- Avatar -->
+                <div class="avatar mx-auto white align-self-center testAvatar">
+                  <img src="img/engineer.png" class="rounded-circle" alt="First sample avatar image">
+                </div>
+                <!-- Card content -->
+                <div class="card-body card-body-cascade text-center">
+                  <!-- Title -->
+                  <h4 class="card-title">
+                    <strong>Jose Mujica</strong>
+                  </h4>
+                  <!-- Subtitle -->
+                  <h6 class="font-weight-bold indigo-text py-2">Handyman Services</h6>
+                  <!-- Text -->
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+              <!-- Card -->
             </div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </section>      
 
